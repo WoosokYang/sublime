@@ -1,3 +1,24 @@
 [
-    {"keys": ["ctrl+'"], "command": "_enter_normal_mode",   "args": {"mode": "mode_insert"},    "context": [{"key": "vi_insert_mode_aware"}]},
+    {"keys": ["ctrl+'"], "command": "_enter_normal_mode",   "args": {"mode": "mode_insert"},
+        "context":
+        [
+            {"key": "vi_insert_mode_aware"}
+        ]
+    },
+    { "keys": ["ctrl+'"], "command": "hide_panel", "args": {"cancel": true},
+        "context":
+        [
+            { "key": "panel_visible", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["ctrl+'"], "command": "hide_overlay", "context":
+        [
+            { "key": "overlay_visible", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["ctrl+'"], "command": "hide_popup", "context":
+        [
+            { "key": "popup_visible", "operator": "equal", "operand": true }
+        ]
+    },
 ]
